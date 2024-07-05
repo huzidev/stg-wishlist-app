@@ -1,0 +1,52 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider     = "mysql"
+  url          =  env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model Session {
+  id          String    @id
+  shop        String
+  state       String
+  isOnline    Boolean   @default(false)
+  scope       String?
+  expires     DateTime?
+  accessToken String
+  userId      BigInt?
+}
+
+model Product {
+  id           Int      @id @default(autoincrement())
+  handle       String
+  shopify_id   String
+  shopify_url  String
+  list         List     @relation(fields: [listId], references: [id], onDelete: Cascade)
+  listId       Int
+  clicks       Int      @default(0)
+  discount     Float    @default(0)
+  created_at   DateTime @default(now())
+}
+
+model List {
+  id           Int        @id @default(autoincrement())
+  customer_id  String
+  title        String
+  shopify_url  String
+  products     Product[]
+  created_at   DateTime   @default(now())
+}
+
+model Store {
+  id           Int        @id @default(autoincrement())
+  shopify_url  String
+  discounts    Int        @default(0) 
+  plan         Int
+  created_at   DateTime @default(now())
+}

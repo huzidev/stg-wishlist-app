@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE `store` ADD COLUMN `discounts` INTEGER NOT NULL DEFAULT 0,
+    ADD COLUMN `guest_list` BOOLEAN NOT NULL DEFAULT false;

@@ -1,0 +1,109 @@
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+ 
+#sw-wishlist-lists h1 {
+  margin-bottom: 0;
+}
+
+.modal-container .modal-content input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.title-input-field:focus {
+  outline: none;
+}
+
+select {
+  cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.wishlist-button__content button {
+  padding: 0px;
+  background: inherit;
+  padding: 16px 0px;
+  width: 100%;
+}
+
+#wishlist-button {
+  max-width: 438px;
+  color: #fff;
+  text-align: center; 
+  border: none;
+  border-radius: 4px;
+  background: #007bff!important;
+  cursor: pointer;
+} 
+
+.wishlist-button {
+  background: #007bff!important;
+}
+
+.cancel-button {
+  background: #dc3545;
+}
+
+.modal-button-conainer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.wishlist-button:hover {
+  background: #0056b3;
+}
+
+.cancel-button:hover {
+  background: #c82333;
+}
+
+.wishlist-icon {
+  z-index: 999;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.back-btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.add-btn {
+  margin-bottom: 30px;
+}

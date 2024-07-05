@@ -1,0 +1,34 @@
+.wishlist-products .product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.wishlist-products h1 {
+  margin: 0;
+}
+
+.wishlist-products .product-card {
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.wishlist-products .product-card img {
+  width: 100%;
+  display: block; 
+  margin-bottom: 10px;
+}
+
+.wishlist-products .product-button {
+  padding: 10px 35px;
+  background-color: #008060;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.wishlist-products .wishlist-button-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}

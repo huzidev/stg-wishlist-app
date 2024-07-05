@@ -1,0 +1,17 @@
+.modal-msg {
+  padding: 12px;
+  font-size: 20px;
+}
+
+.Polaris-DataTable thead tr > th {
+  font-weight: 500;
+  text-align: left;
+}
+
+.Polaris-DataTable tbody tr > * {
+  text-align: left;
+}
+
+.plan-activated .Polaris-ShadowBevel {
+  border: 2px solid var(--p-color-bg-fill-success);
+}
