@@ -21,7 +21,7 @@ const shopify = shopifyApp({
   apiVersion: LATEST_API_VERSION,
   scopes: scopes.split(","),
   // appUrl: process.env.SHOPIFY_APP_URL || "",
-  appUrl: "https://stg-wishlist-app.vercel.app",
+  appUrl: "stg-wishlist-642w8nr3i-huzidevs-projects.vercel.app",
   authPathPrefix: "/auth",
   sessionStorage: new PrismaSessionStorage(prisma),
   distribution: AppDistribution.AppStore,
