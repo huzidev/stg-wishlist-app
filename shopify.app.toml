@@ -1,0 +1,28 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "0561667a78a7971bf4c293af69121faf"
+name = "wishlist-app-dev"
+application_url = "https://possible-toilet-basics-mysimon.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "wishlist-plan-feature.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products, read_customers, write_discounts"
+
+[auth]
+redirect_urls = [
+  "https://possible-toilet-basics-mysimon.trycloudflare.com/auth/callback",
+  "https://possible-toilet-basics-mysimon.trycloudflare.com/auth/shopify/callback",
+  "https://possible-toilet-basics-mysimon.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-01"
+
+[pos]
+embedded = false
