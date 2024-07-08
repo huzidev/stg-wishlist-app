@@ -114,9 +114,9 @@ export default class Shop {
           message: `No product were added in the month of `,
         };
       }
-    } catch (error) {
-      console.error("Error :", error);
-      throw error;
+    } catch (e) {
+      console.error("Error :", e);
+      throw e;
     }
   }
 
@@ -206,8 +206,8 @@ export default class Shop {
         message: `${products.length} fetched successfully`,
       };
     } catch (e) {
-      console.error("Error :", error);
-      throw error;
+      console.error("Error :", e);
+      throw e;
     }
   }
 }
