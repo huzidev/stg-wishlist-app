@@ -2,7 +2,7 @@
   "name": "wishlist-app-dev",
   "private": true,
   "scripts": {
-    "build": "remix build",
+    "build": "prisma generate && remix build",
     "predev": "prisma generate && prisma migrate deploy",
     "dev": "shopify app dev --theme=141995049182",
     "config:link": "shopify app config link",
@@ -20,7 +20,8 @@
     "graphql-codegen": "graphql-codegen",
     "theme-code-watch": "webpack watch --config webpack.config.js",
     "theme-dev": "webpack serve",
-    "theme-build": "webpack"
+    "theme-build": "webpack",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@prisma/client": "^5.9.0",
