@@ -2,7 +2,7 @@
   "name": "wishlist-app-dev",
   "private": true,
   "scripts": {
-    "build": "prisma generate && remix build",
+    "build": "prisma generate && prisma migrate deploy && remix build",
     "predev": "prisma generate && prisma migrate deploy",
     "dev": "shopify app dev --theme=141995049182",
     "config:link": "shopify app config link",
