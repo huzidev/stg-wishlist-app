@@ -1,3 +1,5 @@
+import prisma from "../../db.server";
+
 export default class Shop {
   constructor(shop, graphql) {
     this.shopUrl = shop;
@@ -85,14 +87,6 @@ export default class Shop {
           list: true,
         },
       });
-      // const products = await prisma.product.findMany({
-      //   where: {
-      //     shopify_url: this.shopUrl,
-      //   },
-      //   include: {
-      //     list: true,
-      //   },
-      // });
       let response = {};
       if (!!products.length) {
         products.forEach((product) => {
