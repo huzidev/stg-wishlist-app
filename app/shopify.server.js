@@ -12,16 +12,12 @@ import prisma from "./db.server";
 export const STANDARD_PLAN = 'Standard';
 export const ADVANCED_PLAN = 'Advanced';
 
-const scopes = "write_products, read_customers, write_discounts";
-
 const shopify = shopifyApp({
-  // apiKey: process.env.SHOPIFY_API_KEY,
-  apiKey: "0561667a78a7971bf4c293af69121faf",
+  apiKey: process.env.SHOPIFY_API_KEY,
   apiSecretKey: process.env.SHOPIFY_API_SECRET || "",
   apiVersion: LATEST_API_VERSION,
-  scopes: scopes.split(","),
-  // appUrl: process.env.SHOPIFY_APP_URL || "",
-  appUrl: "stg-wishlist-642w8nr3i-huzidevs-projects.vercel.app",
+  scopes: process.env.SCOPES?.split(","),
+  appUrl: process.env.SHOPIFY_APP_URL || "",
   authPathPrefix: "/auth",
   sessionStorage: new PrismaSessionStorage(prisma),
   distribution: AppDistribution.AppStore,
