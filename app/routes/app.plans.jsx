@@ -37,13 +37,14 @@ export async function action({ request }) {
   const { shop } = session;
   const response = await plan.buyPlan(id);
   const myShop = shop.replace(".myshopify.com", "");
+  const myAPP = process.env.APP_NAME;
   let changePlan;
   if (id !== 1) {
     changePlan = await billing.request({
       plan: planType,
       isTest: true,
-      returnUrl: `https://admin.shopify.com/store/${myShop}/apps/wishlist-app-dev-2/app`,
-    })
+      returnUrl: `https://admin.shopify.com/store/${myShop}/apps/${myAPP}/app`,
+    });
   } else {
     try {
       const currentPlan = await billing.require({
