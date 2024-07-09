@@ -2,12 +2,12 @@
 
 client_id = "fb1571e3f684d3a88b46265fa708f9d1"
 name = "wishlist-app-stg"
-application_url = "https://possible-toilet-basics-mysimon.trycloudflare.com"
+application_url = "https://stg-wishlist-app.vercel.app"
 embedded = true
 
 [build]
 automatically_update_urls_on_dev = true
-dev_store_url = "stg-wishlist-store.myshopify.com"
+dev_store_url = "wishlist-plan-feature.myshopify.com"
 include_config_on_deploy = true
 
 [access_scopes]
@@ -16,9 +16,9 @@ scopes = "write_products, read_customers, write_discounts"
 
 [auth]
 redirect_urls = [
-  "https://possible-toilet-basics-mysimon.trycloudflare.com/auth/callback",
-  "https://possible-toilet-basics-mysimon.trycloudflare.com/auth/shopify/callback",
-  "https://possible-toilet-basics-mysimon.trycloudflare.com/api/auth/callback"
+  "https://stg-wishlist-app.vercel.app/auth/callback",
+  "https://stg-wishlist-app.vercel.app/auth/shopify/callback",
+  "https://stg-wishlist-app.vercel.app/api/auth/callback"
 ]
 
 [webhooks]
