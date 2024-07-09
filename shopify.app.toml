@@ -1,13 +1,13 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-client_id = "0561667a78a7971bf4c293af69121faf"
-name = "wishlist-app-dev"
+client_id = "fb1571e3f684d3a88b46265fa708f9d1"
+name = "wishlist-app-stg"
 application_url = "https://possible-toilet-basics-mysimon.trycloudflare.com"
 embedded = true
 
 [build]
 automatically_update_urls_on_dev = true
-dev_store_url = "wishlist-plan-feature.myshopify.com"
+dev_store_url = "stg-wishlist-store.myshopify.com"
 include_config_on_deploy = true
 
 [access_scopes]

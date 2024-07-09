@@ -22,7 +22,7 @@ export default function Settings() {
   return (
     <Page
       backAction={{ url: "/app" }}
-      title="Settings"
+      title="Stats"
       subtitle="Merchant's Profile"
       compactTitle
       fullWidth
