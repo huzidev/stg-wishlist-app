@@ -2,7 +2,8 @@
 
 client_id = "fb1571e3f684d3a88b46265fa708f9d1"
 name = "wishlist-app-stg"
-application_url = "https://stg-wishlist-app.vercel.app"
+handle = "wishlist-app-stg-1"
+application_url = "https://stg-wishlist-app.vercel.app/"
 embedded = true
 
 [build]
@@ -12,7 +13,7 @@ include_config_on_deploy = true
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = "write_products, read_customers, write_discounts"
+scopes = "write_products,read_customers,write_discounts"
 
 [auth]
 redirect_urls = [

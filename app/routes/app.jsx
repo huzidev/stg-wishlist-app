@@ -6,8 +6,8 @@ import {
   useRouteError,
   useSubmit
 } from "@remix-run/react";
+import { Provider } from "@shopify/app-bridge-react";
 import polarisStyles from "@shopify/polaris/build/esm/styles.css";
-import { AppProvider } from "@shopify/shopify-app-remix/react";
 import { boundary } from "@shopify/shopify-app-remix/server";
 import { useEffect } from "react";
 import customStyles from "~/styles/custom.css";
@@ -67,8 +67,8 @@ export default function App() {
   }, [res]);
 
   return (
-    <AppProvider isEmbeddedApp apiKey={apiKey}>
-      <ui-nav-menu>
+    <Provider isEmbeddedApp apiKey={apiKey}>
+       <ui-nav-menu>
         <Link to="/app" rel="home">
           Home
         </Link>
@@ -77,7 +77,18 @@ export default function App() {
         <Link to="/app/support">Get Support</Link>
       </ui-nav-menu>
       <Outlet />
-    </AppProvider>
+    </Provider>
+    // <AppProvider isEmbeddedApp apiKey={apiKey}>
+    //   <ui-nav-menu>
+    //     <Link to="/app" rel="home">
+    //       Home
+    //     </Link>
+    //     <Link to="/app/settings">Yours Stats</Link>
+    //     <Link to="/app/plans">Change Plan</Link>
+    //     <Link to="/app/support">Get Support</Link>
+    //   </ui-nav-menu>
+    //   <Outlet />
+    // </AppProvider>
   );
 }
 
