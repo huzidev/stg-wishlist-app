@@ -7,8 +7,9 @@ import {
   LATEST_API_VERSION,
   shopifyApp
 } from "@shopify/shopify-app-remix/server";
-import { PrismaSessionStorage } from "@shopify/shopify-app-session-storage-prisma";
-import prisma from "./db.server";
+// import { PrismaSessionStorage } from "@shopify/shopify-app-session-storage-prisma";
+// import prisma from "./db.server";
+import Shopify from "@shopify/shopify-api";
 export const STANDARD_PLAN = 'Standard';
 export const ADVANCED_PLAN = 'Advanced';
 
@@ -19,7 +20,8 @@ const shopify = shopifyApp({
   scopes: process.env.SCOPES?.split(","),
   appUrl: process.env.SHOPIFY_APP_URL || "",
   authPathPrefix: "/auth",
-  sessionStorage: new PrismaSessionStorage(prisma),
+  // sessionStorage: new PrismaSessionStorage(prisma),
+  sessionStorage: new Shopify.Session.PostgreSQLSessionStorage(new URL(process.env.POSTGRES_PRISMA_URL)),
   distribution: AppDistribution.AppStore,
   restResources,
   billing: {
