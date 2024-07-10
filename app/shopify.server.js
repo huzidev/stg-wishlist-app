@@ -1,4 +1,3 @@
-import { PrismaClient } from "@prisma/client";
 import { restResources } from "@shopify/shopify-api/rest/admin/2024-01";
 import "@shopify/shopify-app-remix/adapters/node";
 import {
@@ -9,19 +8,10 @@ import {
   shopifyApp
 } from "@shopify/shopify-app-remix/server";
 import { PrismaSessionStorage } from "@shopify/shopify-app-session-storage-prisma";
-// import prisma from "./db.server";
+import prisma from "./db.server";
 // import Shopify from "@shopify/shopify-api";
 export const STANDARD_PLAN = 'Standard';
 export const ADVANCED_PLAN = 'Advanced';
-
-const prisma = new PrismaClient({
-  datasources: {
-    db: {
-      url: process.env.POSTGRES_PRISMA_URL,
-    },
-  },
-});
-
 
 const shopify = shopifyApp({
   apiKey: process.env.SHOPIFY_API_KEY,
