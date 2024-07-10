@@ -1,4 +1,3 @@
-// export const LOCAL_HOST = 'http://localhost:59946';
 export const LOCAL_HOST = 'https://stg-wishlist-app.vercel.app';
 export const themeListURL = `${LOCAL_HOST}/theme/list`;
 export const themeProductURL = `${LOCAL_HOST}/theme/product`;
