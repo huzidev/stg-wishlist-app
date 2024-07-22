@@ -46,7 +46,7 @@ async function getPlan() {
   const currentPlan = localStorage.getItem('theme-plan');
   if (!currentPlan) {
     // Set the plan in localStorage if their is no plan
-    localStorage.setItem('theme-plan', plan);
+    localStorage.setItem('theme-plan', response);
   } else {
     if (parseInt(currentPlan) !== plan) {
       // update the plan in localStorage
