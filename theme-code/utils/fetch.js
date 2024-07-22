@@ -1,4 +1,4 @@
-export const LOCAL_HOST = process.env.SHOPIFY_APP_URL;
+export const LOCAL_HOST = process.env.THEME_HOST;
 export const themeListURL = `${LOCAL_HOST}/theme/list`;
 export const themeProductURL = `${LOCAL_HOST}/theme/product`;
 const themePlanURL = `${LOCAL_HOST}/theme/plan`;
