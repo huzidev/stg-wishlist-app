@@ -1,10 +1,10 @@
-export const LOCAL_HOST = process.env.THEME_HOST;
+export const LOCAL_HOST = 'https://stg-wishlist-app.vercel.app';
 export const themeListURL = `${LOCAL_HOST}/theme/list`;
 export const themeProductURL = `${LOCAL_HOST}/theme/product`;
 const themePlanURL = `${LOCAL_HOST}/theme/plan`;
 
 // Get All Wishlist Added By LoggedIn User
-export async function getLists(HOST) {
+export async function getLists(HOST) {  
     try {
         const res = await fetch(HOST, {
             method: "GET",
