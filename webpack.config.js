@@ -60,6 +60,9 @@ module.exports = (env) => {
       extensions: ['.js', '.jsx', '.css']
     },
     plugins: [
+      new webpack.ProvidePlugin({
+        "React": "react",
+      }),
       new RemoveEmptyScriptsPlugin(),
       new CleanWebpackPlugin({
         verbose: true,
