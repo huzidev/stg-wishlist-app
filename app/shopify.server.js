@@ -25,7 +25,6 @@ const shopify = shopifyApp({
   // sessionStorage: new Shopify.Session.PostgreSQLSessionStorage(new URL(process.env.POSTGRES_PRISMA_URL)),
   distribution: AppDistribution.AppStore,
   restResources,
-  isEmbeddedApp: false,
   cookies: {
     secure: true,
     sameSite: 'none',

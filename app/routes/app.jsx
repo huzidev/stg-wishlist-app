@@ -67,7 +67,7 @@ export default function App() {
   }, [res]);
 
   return (
-    <AppProvider isEmbeddedApp={false} apiKey={apiKey}>
+    <AppProvider isEmbeddedApp apiKey={apiKey}>
       <ui-nav-menu>
         <Link to="/app" rel="home">
           Home
