@@ -13,6 +13,9 @@ import prisma from "./db.server";
 export const STANDARD_PLAN = 'Standard';
 export const ADVANCED_PLAN = 'Advanced';
 
+console.log("SW process.env.SCOPES", process.env.SCOPES);
+console.log("SW process.env.SCOPES?.split(",")", process.env.SCOPES?.split(","));
+
 const shopify = shopifyApp({
   apiKey: process.env.SHOPIFY_API_KEY,
   apiSecretKey: process.env.SHOPIFY_API_SECRET || "",
