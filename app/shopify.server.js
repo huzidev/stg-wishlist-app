@@ -29,6 +29,11 @@ const shopify = shopifyApp({
     secure: true,
     sameSite: 'none',
   },
+  config: {
+    apiKey: process.env.SHOPIFY_API_KEY,
+    host: process.env.SHOPIFY_APP_URL,
+    forceRedirect: true
+  },
   billing: {
     [STANDARD_PLAN]: {
       amount: 19.99,

@@ -4,7 +4,7 @@
   "scripts": {
     "build": "prisma generate && prisma migrate deploy && remix build",
     "predev": "prisma generate && prisma migrate deploy",
-    "dev": "shopify app dev --theme=141995049182",
+    "dev": "shopify app dev --theme=143908798714",
     "config:link": "shopify app config link",
     "config:push": "shopify app config push",
     "generate": "shopify app generate",

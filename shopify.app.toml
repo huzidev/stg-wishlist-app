@@ -1,29 +1,29 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-client_id = "fb1571e3f684d3a88b46265fa708f9d1"
-name = "wishlist-app-stg"
-handle = "wishlist-app-stg-1"
-application_url = "https://stg-wishlist-app.vercel.app/"
+client_id = "d0b4f5d9caf6ead397efe23e132e8a12"
+name = "wishlist-app-stg-1"
+handle = "wishlist-app-stg-2"
+application_url = "https://stg-wishlist-app-latest.vercel.app/"
 embedded = true
 
 [build]
-automatically_update_urls_on_dev = true
-dev_store_url = "stg-wishlist-store.myshopify.com"
+automatically_update_urls_on_dev = false
+dev_store_url = "stg-wishlist-store-1.myshopify.com"
 include_config_on_deploy = true
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = "write_products,read_customers,write_discounts"
+scopes = "read_customers,write_discounts,write_products"
 
 [auth]
 redirect_urls = [
-  "https://stg-wishlist-app.vercel.app/auth/callback",
-  "https://stg-wishlist-app.vercel.app/auth/shopify/callback",
-  "https://stg-wishlist-app.vercel.app/api/auth/callback"
+  "https://stg-wishlist-app-latest.vercel.app/auth/callback",
+  "https://stg-wishlist-app-latest.vercel.app/auth/shopify/callback",
+  "https://stg-wishlist-app-latest.vercel.app/api/auth/callback"
 ]
 
 [webhooks]
-api_version = "2024-01"
+api_version = "2024-07"
 
 [pos]
 embedded = false
