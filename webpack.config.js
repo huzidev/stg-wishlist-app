@@ -3,6 +3,7 @@ const path = require('path');
 const glob = require("glob")
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const RemoveEmptyScriptsPlugin = require("webpack-remove-empty-scripts")
+const webpack = require('webpack');
 
 // This is the main configuration object.
 // Here, you write different options and tell Webpack what to do
